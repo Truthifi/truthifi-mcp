@@ -1,0 +1,15 @@
+name: Documentation correction
+description: Something in this repository is wrong or out of date
+labels: [docs]
+body:
+  - type: markdown
+    attributes:
+      value: "**Don't include account numbers, balances, screenshots of your data, or anything from your Truthifi account.** For account questions use https://truthifi.com/help."
+  - type: input
+    id: file
+    attributes: { label: "File or section" }
+    validations: { required: true }
+  - type: textarea
+    id: problem
+    attributes: { label: "What is wrong, and what should it say?" }
+    validations: { required: true }

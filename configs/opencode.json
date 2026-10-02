@@ -1,0 +1,10 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "truthifi": {
+      "type": "remote",
+      "url": "https://api.truthifi.com/mcp",
+      "enabled": true
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "truthifi",
+  "version": "1.0.0",
+  "description": "Holdings, fees, performance and your Truthifi Score across 18,000+ institutions. Can't move money.",
+  "mcpServers": {
+    "truthifi": {
+      "httpUrl": "https://api.truthifi.com/mcp"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}

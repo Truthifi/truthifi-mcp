@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "truthifi": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-remote@0.14.3",
+        "https://api.truthifi.com/mcp"
+      ]
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "truthifi",
+  "version": "1.0.0",
+  "description": "Holdings, fees, performance and your Truthifi Score across 18,000+ institutions. Can't move money.",
+  "author": {
+    "name": "Truthifi",
+    "email": "support@truthifi.com",
+    "url": "https://truthifi.com"
+  },
+  "homepage": "https://truthifi.com/features/mcp",
+  "repository": "https://github.com/truthifi/truthifi-mcp",
+  "license": "MIT",
+  "keywords": [
+    "truthifi",
+    "portfolio",
+    "investing",
+    "investment fees",
+    "holdings",
+    "asset allocation",
+    "personal-finance",
+    "wealth"
+  ]
+}

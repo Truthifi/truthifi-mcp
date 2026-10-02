@@ -1,0 +1,37 @@
+{
+  "name": "truthifi",
+  "owner": {
+    "name": "Truthifi",
+    "email": "support@truthifi.com"
+  },
+  "metadata": {
+    "description": "Official Truthifi plugins for Claude Code and Cowork",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "truthifi",
+      "source": "./",
+      "description": "Holdings, fees, performance and your Truthifi Score across 18,000+ institutions. Can't move money.",
+      "author": {
+        "name": "Truthifi",
+        "email": "support@truthifi.com",
+        "url": "https://truthifi.com"
+      },
+      "homepage": "https://truthifi.com/features/mcp",
+      "category": "finance",
+      "keywords": [
+        "mcp",
+        "mcp-server",
+        "remote-mcp",
+        "model-context-protocol",
+        "finance",
+        "personal-finance",
+        "investing",
+        "portfolio",
+        "wealth-monitoring",
+        "fees"
+      ]
+    }
+  ]
+}

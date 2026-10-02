@@ -1,0 +1,10 @@
+{
+  "$schema": "https://charm.land/crush.json",
+  "mcp": {
+    "truthifi": {
+      "type": "http",
+      "url": "https://api.truthifi.com/mcp",
+      "oauth": true
+    }
+  }
+}

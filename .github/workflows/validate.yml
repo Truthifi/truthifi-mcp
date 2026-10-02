@@ -1,0 +1,73 @@
+name: validate
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with: { python-version: "3.12" }
+      - run: pip install pyyaml==6.0.3 jsonschema==4.26.0
+      - name: Manifests parse
+        run: |
+          python - <<'PY'
+          import json, yaml, pathlib, sys
+          bad = []
+          for p in pathlib.Path('.').rglob('*'):
+              if '.git' in p.parts or not p.is_file(): continue
+              try:
+                  if p.suffix == '.json': json.loads(p.read_text())
+                  elif p.suffix in ('.yml', '.yaml'): yaml.safe_load(p.read_text())
+              except Exception as e: bad.append(f"{p}: {e}")
+          print("\n".join(bad) or "all manifests parse"); sys.exit(1 if bad else 0)
+          PY
+      - name: Skill frontmatter and versions in sync
+        run: |
+          python - <<'PY'
+          import yaml, glob, json, sys
+          bad = []
+          vers = {}
+          for p in glob.glob('skills/*/SKILL.md'):
+              fm = yaml.safe_load(open(p).read().split('---')[1])
+              if not fm.get('name') or not (0 < len(fm.get('description', '')) <= 1024): bad.append(p)
+              if fm.get('name') != p.split('/')[1]: bad.append(p + ' (name != folder)')
+              vers[p] = str(fm.get('metadata', {}).get('version'))
+          for f in ['plugin.json', '.claude-plugin/plugin.json', '.cursor-plugin/plugin.json', 'gemini-extension.json', 'lhm.plugin.json']:
+              vers[f] = str(json.load(open(f)).get('version'))
+          vers['.claude-plugin/marketplace.json'] = str(json.load(open('.claude-plugin/marketplace.json'))['metadata']['version'])
+          if len(set(vers.values())) != 1: bad.append(f"versions differ: {vers}")
+          print(bad or "frontmatter and versions ok"); sys.exit(1 if bad else 0)
+          PY
+      - name: server.json and Agent Plugins schemas
+        run: |
+          curl -sf --retry 3 https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json -o /tmp/s.json
+          curl -sf --retry 3 https://agent-plugins.org/schemas/1.0.0/plugin.schema.json -o /tmp/p.json
+          curl -sf --retry 3 https://agent-plugins.org/schemas/1.0.0/mcp.schema.json -o /tmp/m.json
+          python -c "import json,jsonschema as j;L=lambda f:json.load(open(f));j.validate(L('server.json'),L('/tmp/s.json'));j.validate(L('plugin.json'),L('/tmp/p.json'));j.validate(L('mcp.json'),L('/tmp/m.json'));print('schemas valid')"
+      - name: No placeholders or banned phrases
+        run: |
+          ! grep -rInEi "REPLACE_WITH|TODO|TBD|XXX|PLACEHOLDER|<[a-z-]*-username>|COUNSEL REVIEW REQUIRED|no write access|strictly read-only|read-only by design|truthifi-connect\.ai|hidden fees?|guaranteed|fiduciar|unbiased|\bbest\b|OAuth ?2\.1|S256|PKCE|annotation|all your accounts|every account|isTrusted: *true|wealth-management|mcp-remote[\"',]" --exclude-dir=.git --exclude-dir=.github --exclude=AGENTS.md .
+      - name: Tool count matches tools.json
+        run: |
+          python - <<'PY'
+          import json, re, sys
+          n = len(json.load(open('docs/tools.json'))['tools'])
+          rows = len(re.findall(r'^\| `[a-z_]+` \|', open('README.md').read(), re.M))
+          print(n, rows); sys.exit(0 if n == rows else 1)
+          PY
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with: { node-version: "22" }
+      - name: Claude plugin validate (marketplace and plugin)
+        run: |
+          npx -y @anthropic-ai/claude-code@2.1.284 plugin validate --strict .
+          npx -y @anthropic-ai/claude-code@2.1.284 plugin validate --strict ./.claude-plugin/plugin.json
+      - name: Link check
+        uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2.9.0
+        with:
+          args: --no-progress --exclude 'api\.truthifi\.com' --exclude 'github\.com/truthifi/truthifi-mcp' './**/*.md'
+          fail: true

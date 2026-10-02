@@ -1,0 +1,267 @@
+{
+  "server": "com.truthifi/mcp",
+  "endpoint": "https://api.truthifi.com/mcp",
+  "tools": [
+    {
+      "name": "get_accounts",
+      "title": "Get linked accounts",
+      "description": "Lists your linked accounts, and how far back each one's data goes",
+      "limits": "",
+      "credits": 1,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "get_groups",
+      "title": "Get account groups",
+      "description": "Your account groups, goals and wealth buckets",
+      "limits": "",
+      "credits": 1,
+      "plans": "Pro+",
+      "changesData": false
+    },
+    {
+      "name": "get_advisors",
+      "title": "Get linked advisors",
+      "description": "Financial advisors linked to your accounts, with details from public regulatory records",
+      "limits": "",
+      "credits": 1,
+      "plans": "Pro+",
+      "changesData": false
+    },
+    {
+      "name": "get_dated_holdings",
+      "title": "Get holdings on a date",
+      "description": "Your positions in each account on one day (the latest by default)",
+      "limits": "Sector, industry and country detail on Pro+ only",
+      "credits": 2,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "get_composition",
+      "title": "Get portfolio composition",
+      "description": "How your portfolio splits by asset class, sector, industry or country (top 10 of each)",
+      "limits": "Top 10 of each grouping",
+      "credits": 1,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "get_equity_concentrations",
+      "title": "Get stock concentrations",
+      "description": "Your exposure to individual stocks, including what you hold through funds",
+      "limits": "",
+      "credits": 1,
+      "plans": "Pro+",
+      "changesData": false
+    },
+    {
+      "name": "get_market_cap_allocation",
+      "title": "Get market-cap allocation",
+      "description": "How your portfolio splits across market-cap sizes, for stocks and funds separately",
+      "limits": "",
+      "credits": 1,
+      "plans": "Pro+",
+      "changesData": false
+    },
+    {
+      "name": "get_balance_history",
+      "title": "Get balance history",
+      "description": "Opening and closing balance for each account over a date range",
+      "limits": "",
+      "credits": 1,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "get_performance_history",
+      "title": "Get performance history",
+      "description": "Return, income and gain or loss over a date range, compared with a similar benchmark",
+      "limits": "",
+      "credits": 1,
+      "plans": "Pro+",
+      "changesData": false
+    },
+    {
+      "name": "get_fees",
+      "title": "Get fees",
+      "description": "Fees per account, by type: maintenance, margin interest, advisory, commissions, fund fees",
+      "limits": "",
+      "credits": 1,
+      "plans": "Max+",
+      "changesData": false
+    },
+    {
+      "name": "get_transactions",
+      "title": "Get transactions",
+      "description": "Individual transactions, filterable and paged",
+      "limits": "20 per call on Explore/Free Checkup, 100 on Pro/Monitoring, 150 on Max/Monitoring Plus+",
+      "credits": 1,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "get_budget_flow_summary",
+      "title": "Get spending and income summary",
+      "description": "Spending and income by period and category (excludes card payments and investment income)",
+      "limits": "",
+      "credits": 1,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "get_investment_transactions_summary",
+      "title": "Get investment activity summary",
+      "description": "Buys, sells, dividends and other investment activity, totalled by period",
+      "limits": "",
+      "credits": 1,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "get_asset_liabilities",
+      "title": "Get manual assets and liabilities",
+      "description": "Assets and liabilities you track by hand, such as a home, a car or a mortgage",
+      "limits": "",
+      "credits": 1,
+      "plans": "Pro+",
+      "changesData": false
+    },
+    {
+      "name": "create_asset_liability",
+      "title": "Add a manual asset or liability",
+      "description": "Adds one asset or liability you track by hand. Shows a preview first, and saves only after you confirm",
+      "limits": "",
+      "credits": 0,
+      "plans": "Pro+",
+      "changesData": true
+    },
+    {
+      "name": "delete_asset_liability",
+      "title": "Delete a manual asset or liability",
+      "description": "Permanently deletes one asset or liability you track by hand",
+      "limits": "",
+      "credits": 1,
+      "plans": "Pro+",
+      "changesData": true
+    },
+    {
+      "name": "get_findings",
+      "title": "Get Truthifi Score findings",
+      "description": "The financial health findings behind your Truthifi Score",
+      "limits": "",
+      "credits": 1,
+      "plans": "Pro+",
+      "changesData": false
+    },
+    {
+      "name": "get_truthifi_score_history",
+      "title": "Get Truthifi Score history",
+      "description": "Your Truthifi Score over time",
+      "limits": "",
+      "credits": 1,
+      "plans": "Pro+",
+      "changesData": false
+    },
+    {
+      "name": "get_security_info",
+      "title": "Get security details",
+      "description": "Reference details for up to 15 securities per call",
+      "limits": "Up to 15 securities per call (3 on Explore and Free Checkup)",
+      "credits": 1,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "get_security_distributions",
+      "title": "Get dividend and capital-gain history",
+      "description": "Dividend and capital-gain history for up to 15 securities per call, up to 2 years back",
+      "limits": "Up to 15 securities per call (3 on Explore and Free Checkup), up to 2 years back",
+      "credits": 1,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "get_security_news",
+      "title": "Get security news",
+      "description": "Recent news by stock ticker or by topic (stock tickers only, not funds)",
+      "limits": "",
+      "credits": 1,
+      "plans": "Pro+",
+      "changesData": false
+    },
+    {
+      "name": "get_truthifi_info",
+      "title": "Ask about Truthifi",
+      "description": "Answers questions about Truthifi, linking accounts and US personal-finance benchmarks",
+      "limits": "",
+      "credits": 0,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "run_scan",
+      "title": "Refresh a connection now",
+      "description": "Refreshes one connection's data right now, instead of waiting for the automatic refresh",
+      "limits": "",
+      "credits": 3,
+      "plans": "All",
+      "changesData": true
+    },
+    {
+      "name": "get_scan_status",
+      "title": "Check refresh status",
+      "description": "Checks how a refresh is going",
+      "limits": "",
+      "credits": 0,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "get_subscription_info",
+      "title": "Get plan and credits",
+      "description": "Your plan, credits used, and which tools you can use",
+      "limits": "",
+      "credits": 0,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "connect_account",
+      "title": "Get a link to connect an account",
+      "description": "Gives you a secure link to connect a new bank or brokerage account",
+      "limits": "",
+      "credits": 0,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "fix_connections",
+      "title": "Get a link to fix connections",
+      "description": "Gives you a link to fix bank or brokerage connections that aren't refreshing (only when one needs fixing)",
+      "limits": "",
+      "credits": 0,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "upgrade",
+      "title": "Get a link to upgrade",
+      "description": "Gives you a link to the plan picker, when a higher plan exists",
+      "limits": "",
+      "credits": 0,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "get_prompt_catalog",
+      "title": "Get ready-made prompts",
+      "description": "Ready-made step-by-step prompts, such as a fee audit, a spending review or a tax preview. Instructions only, never account data",
+      "limits": "",
+      "credits": 0,
+      "plans": "All",
+      "changesData": false
+    }
+  ]
+}

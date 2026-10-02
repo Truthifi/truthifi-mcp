@@ -1,0 +1,7 @@
+{
+  "context_servers": {
+    "truthifi": {
+      "url": "https://api.truthifi.com/mcp"
+    }
+  }
+}

@@ -1,0 +1,3 @@
+[mcp_servers.truthifi]
+url = "https://api.truthifi.com/mcp"
+# then sign in: codex mcp login truthifi

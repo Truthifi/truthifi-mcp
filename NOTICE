@@ -1,0 +1,8 @@
+Truthifi MCP documentation
+
+The MIT license in LICENSE covers the text, configuration and skill files in this repository.
+It does not cover files under assets/, logo.png, or the Truthifi name, logo, Truthifi Score or
+other Truthifi marks. See TRADEMARKS.md.
+
+The Truthifi MCP server itself is proprietary and hosted by Truthifi; no server code is in this
+repository.

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "truthifi": {
+      "type": "streamableHttp",
+      "url": "https://api.truthifi.com/mcp"
+    }
+  }
+}

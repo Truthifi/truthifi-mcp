@@ -1,0 +1,128 @@
+{
+  "identifier": "truthifi",
+  "name": "Truthifi",
+  "version": "1.0.0",
+  "category": "finance",
+  "description": "Holdings, fees, performance and your Truthifi Score across 18,000+ institutions. Can't move money.",
+  "homepage": "https://truthifi.com/features/mcp",
+  "icon": "https://framerusercontent.com/images/u37AxMviOa9x9r67PQkR35LJQ.png",
+  "cloudEndpoint": "https://api.truthifi.com/mcp",
+  "author": "Truthifi",
+  "authorUrl": "https://truthifi.com",
+  "tags": [
+    "finance",
+    "personal-finance",
+    "investing",
+    "portfolio",
+    "fees",
+    "remote-mcp"
+  ],
+  "tools": [
+    {
+      "name": "get_accounts",
+      "description": "Lists your linked accounts, and how far back each one's data goes"
+    },
+    {
+      "name": "get_groups",
+      "description": "Your account groups, goals and wealth buckets"
+    },
+    {
+      "name": "get_advisors",
+      "description": "Financial advisors linked to your accounts, with details from public regulatory records"
+    },
+    {
+      "name": "get_dated_holdings",
+      "description": "Your positions in each account on one day (the latest by default)"
+    },
+    {
+      "name": "get_composition",
+      "description": "How your portfolio splits by asset class, sector, industry or country (top 10 of each)"
+    },
+    {
+      "name": "get_equity_concentrations",
+      "description": "Your exposure to individual stocks, including what you hold through funds"
+    },
+    {
+      "name": "get_market_cap_allocation",
+      "description": "How your portfolio splits across market-cap sizes, for stocks and funds separately"
+    },
+    {
+      "name": "get_balance_history",
+      "description": "Opening and closing balance for each account over a date range"
+    },
+    {
+      "name": "get_performance_history",
+      "description": "Return, income and gain or loss over a date range, compared with a similar benchmark"
+    },
+    {
+      "name": "get_fees",
+      "description": "Fees per account, by type: maintenance, margin interest, advisory, commissions, fund fees"
+    },
+    {
+      "name": "get_transactions",
+      "description": "Individual transactions, filterable and paged"
+    },
+    {
+      "name": "get_budget_flow_summary",
+      "description": "Spending and income by period and category (excludes card payments and investment income)"
+    },
+    {
+      "name": "get_investment_transactions_summary",
+      "description": "Buys, sells, dividends and other investment activity, totalled by period"
+    },
+    {
+      "name": "get_asset_liabilities",
+      "description": "Assets and liabilities you track by hand, such as a home, a car or a mortgage"
+    },
+    {
+      "name": "create_asset_liability",
+      "description": "Adds one asset or liability you track by hand. Shows a preview first, and saves only after you confirm"
+    },
+    {
+      "name": "delete_asset_liability",
+      "description": "Permanently deletes one asset or liability you track by hand"
+    },
+    {
+      "name": "get_findings",
+      "description": "The financial health findings behind your Truthifi Score"
+    },
+    {
+      "name": "get_truthifi_score_history",
+      "description": "Your Truthifi Score over time"
+    },
+    {
+      "name": "get_security_info",
+      "description": "Reference details for up to 15 securities per call (fewer on some plans)"
+    },
+    {
+      "name": "get_security_distributions",
+      "description": "Dividend and capital-gain history for up to 15 securities per call (fewer on some plans), up to 2 years back"
+    },
+    {
+      "name": "get_security_news",
+      "description": "Recent news by stock ticker or by topic (stock tickers only, not funds)"
+    },
+    {
+      "name": "get_truthifi_info",
+      "description": "Answers questions about Truthifi, linking accounts and US personal-finance benchmarks"
+    },
+    {
+      "name": "run_scan",
+      "description": "Refreshes one connection's data right now, instead of waiting for the automatic refresh"
+    },
+    {
+      "name": "get_scan_status",
+      "description": "Checks how a refresh is going"
+    },
+    {
+      "name": "get_subscription_info",
+      "description": "Your plan, credits used, and which tools you can use"
+    },
+    {
+      "name": "connect_account",
+      "description": "Gives you a secure link to connect a new bank or brokerage account"
+    }
+  ],
+  "prompts": [],
+  "resources": []
+}

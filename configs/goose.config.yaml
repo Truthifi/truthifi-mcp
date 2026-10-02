@@ -1,0 +1,8 @@
+extensions:
+  truthifi:
+    type: streamable_http
+    name: truthifi
+    display_name: Truthifi
+    uri: https://api.truthifi.com/mcp
+    enabled: true
+    timeout: 300

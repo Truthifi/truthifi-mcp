@@ -1,0 +1,7 @@
+name: Truthifi
+version: 1.0.0
+schema: v1
+mcpServers:
+  - name: Truthifi
+    type: streamable-http
+    url: https://api.truthifi.com/mcp
