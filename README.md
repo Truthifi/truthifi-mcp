@@ -1,8 +1,10 @@
 <p align="center"><img src="assets/truthifi-logo-256.png" width="96" alt="Truthifi logo"></p>
 
+<p align="center"><sub><b>THE COLLABORATION HUB FOR AGENTIC FINANCE</b></sub></p>
+
 <h1 align="center">Truthifi MCP server</h1>
 
-<p align="center"><b>Your holdings, fees, performance and Truthifi Score in your AI assistant.</b><br>
+<p align="center"><b>One verified household record in your AI assistant: accounts, activity, holdings, fees, performance, cash flow, the advisors on your accounts, financial diagnostics, and your Truthifi Score with the findings behind it.</b><br>
 It can't move money or place trades at your bank or brokerage.</p>
 
 <p align="center">
@@ -15,7 +17,7 @@ It can't move money or place trades at your bank or brokerage.</p>
 <img src="https://img.shields.io/badge/registry-com.truthifi%2Fmcp-555" alt="Official MCP Registry name">
 </p>
 
-Truthifi connects your AI assistant to your investment and banking data from 18,000+ supported institutions (through data partners; available data varies by institution): holdings, fees, performance, cash flow, the advisors on your accounts, and your **Truthifi Score** with the findings behind it.
+Truthifi is the financial hub for families, advisors and AI agents: one verified household record they work on together, shared only on the household's terms. This MCP server brings that record into your AI assistant: accounts, activity, holdings, fees, performance, cash flow, the advisors on your accounts, financial diagnostics, and your **Truthifi Score** with the findings behind it, from 18,000+ supported institutions (through data partners; available data varies by institution). So your AI acts on what's real, not what's reported.
 
 This repository holds **documentation, client configuration and agent skills only**. The server is hosted by Truthifi at `https://api.truthifi.com/mcp`; there is nothing to build or run.
 
@@ -29,7 +31,7 @@ This repository holds **documentation, client configuration and agent skills onl
 | **Registry name** | `com.truthifi/mcp` (official MCP Registry) |
 | **Account** | A Truthifi account (see the [Terms](https://truthifi.com/terms) for eligibility). Start free (limits apply); [plans](https://truthifi.com/pricing) |
 
-**Claude** (web or desktop; then available on mobile): Customize → Connectors → **+** → *Add custom connector* → paste `https://api.truthifi.com/mcp` and leave Advanced settings empty. Free plans allow one custom connector. On Team or Enterprise, an Owner adds it first under Organization settings → Connectors.
+**Claude** (web or desktop; then available on mobile): Customize → Connectors → **+** → *Add custom connector* → paste `https://api.truthifi.com/mcp` and leave Advanced settings empty. On Team or Enterprise, an Owner adds it first under Organization settings → Connectors.
 
 **ChatGPT** (web): ChatGPT connects custom MCP servers through developer mode, which OpenAI describes as intended for developers; read OpenAI's guidance before turning it on. Then create an app, paste `https://api.truthifi.com/mcp` and choose OAuth. Which ChatGPT plans can use it, and whether tools that change data are allowed, is set by OpenAI; current steps: <https://truthifi.com/connect>.
 
@@ -72,6 +74,9 @@ Configs for Cursor, VS Code, GitHub Copilot CLI, Windsurf/Devin, Antigravity, Ki
 - How has my portfolio performed this year compared with its benchmark?
 - Which individual stocks am I most exposed to, counting what I hold through funds?
 - What are the findings behind my Truthifi Score?
+- Run a full fee audit of my household.
+- Build my household balance sheet.
+- Give me a tax preview for this year.
 
 ## Tools
 
@@ -119,6 +124,20 @@ Some tools need a higher plan, and some have per-plan limits; `get_subscription_
 | [`truthifi-fee-review`](skills/truthifi-fee-review/SKILL.md) | Fees reported across your accounts, by account and type |
 | [`truthifi-setup`](skills/truthifi-setup/SKILL.md) | Connecting Truthifi and linking a first account |
 
+## About Truthifi
+
+Truthifi is unlocking agentic finance for everyone. We believe a household should own the record of its financial life: everything comes in, and nothing goes out unless the household says so.
+
+- **The Vault.** What people own finally counts: investments, bank and credit accounts, insurance policies, property, private holdings and the documents behind them, in one verified record.
+- **The Decoder.** 18,000 dialects of finance, translated into one. Every holding identified, sells and splits handled correctly, and the record kept whole when a connection breaks.
+- **The Score.** A complete picture, turned into a next action. Truthifi reviews the whole record every night and shows where to focus.
+- **The Feed.** News that actually knows what you own.
+- **The Dashboard.** Insight no single statement can give you: every fee in Fee X-Ray, look-through to your true exposure, benchmarked performance, cash flow and the Wealth Map.
+- **Sharing.** Families decide what their team sees, and can revoke access at any time.
+- **Families, agents and advisors.** Finally working from one verified truth.
+
+Truthifi doesn't sell investments, so it can stay independent. Learn more at [truthifi.com](https://truthifi.com).
+
 ## Security and privacy
 
 - Your assistant can't move money, place trades or change anything at your bank or brokerage. Three tools change data inside Truthifi only.
@@ -136,4 +155,4 @@ Truthifi is not a registered investment adviser or broker-dealer. Truthifi provi
 
 ## License and trademarks
 
-Text, configuration and skill files are MIT licensed (see [LICENSE](LICENSE) and [NOTICE](NOTICE)). The Truthifi name, logo and Truthifi Score are trademarks of Truthifi and are not licensed under MIT; see [TRADEMARKS.md](TRADEMARKS.md). Claude, ChatGPT, Gemini, Copilot, Cursor and other product names are trademarks of their owners and are used only to describe compatibility.
+Text, configuration and skill files are MIT licensed (see [LICENSE](LICENSE) and [NOTICE](NOTICE)). The Truthifi name, logo and Truthifi Score are trademarks of Truthifi, Inc. and are not licensed under MIT; see [TRADEMARKS.md](TRADEMARKS.md). Claude, ChatGPT, Gemini, Copilot, Cursor and other product names are trademarks of their owners and are used only to describe compatibility.

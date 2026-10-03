@@ -3,7 +3,7 @@
   "name": "Truthifi",
   "version": "1.0.0",
   "category": "finance",
-  "description": "Holdings, fees, performance and your Truthifi Score across 18,000+ institutions. Can't move money.",
+  "description": "One verified household record for your AI: accounts, activity, holdings, fees, performance, cash flow, the advisors on your accounts, financial diagnostics, and your Truthifi Score with the findings behind it. Can't move money.",
   "homepage": "https://truthifi.com/features/mcp",
   "icon": "https://framerusercontent.com/images/u37AxMviOa9x9r67PQkR35LJQ.png",
   "cloudEndpoint": "https://api.truthifi.com/mcp",

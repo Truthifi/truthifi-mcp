@@ -1,6 +1,6 @@
 # Truthifi MCP server
 
-> Hosted MCP server at https://api.truthifi.com/mcp (Streamable HTTP, OAuth with Dynamic Client Registration). Lets AI assistants read a user's own linked investment and bank accounts from 18,000+ supported institutions (it can't move money or place trades; three tools change data inside Truthifi only): holdings, fees, performance, cash flow and the Truthifi Score. Registry name com.truthifi/mcp.
+> Truthifi is the financial hub for families, advisors and AI agents: one verified household record they work on together, shared only on the household's terms. Truthifi is unlocking agentic finance for everyone. Its hosted MCP server at https://api.truthifi.com/mcp (Streamable HTTP, OAuth with Dynamic Client Registration) lets AI assistants read a user's own linked investment and bank accounts from 18,000+ supported institutions (it can't move money or place trades; three tools change data inside Truthifi only): holdings, fees, performance, cash flow and the Truthifi Score. Registry name com.truthifi/mcp.
 
 ## Docs
 - [README](https://github.com/truthifi/truthifi-mcp#readme): quick start for every client
