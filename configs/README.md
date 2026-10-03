@@ -4,7 +4,7 @@ Every file connects the same hosted server, `https://api.truthifi.com/mcp`. Noth
 
 | Client | File | Where it goes | Sign-in tested |
 |---|---|---|---|
-| Claude (web or desktop; then on mobile) | none | Customize → Connectors → + → Add custom connector (Free: one custom connector). On Team/Enterprise an Owner adds it first under Organization settings → Connectors | Yes |
+| Claude (web or desktop; then on mobile) | none | Customize → Connectors → + → Add custom connector. On Team/Enterprise an Owner adds it first under Organization settings → Connectors | Yes |
 | ChatGPT (web) | none | Settings → Apps → Advanced settings → Developer mode (some accounts: Settings → Security and login), then create an app, paste the URL, choose OAuth. Plans are set by OpenAI | Yes |
 | Claude Code | `claude-code.mcp.json` | project `.mcp.json`, or `claude mcp add --transport http truthifi https://api.truthifi.com/mcp` | Yes |
 | Cursor | `cursor.mcp.json` | `~/.cursor/mcp.json` or project `.cursor/mcp.json` | Yes |
