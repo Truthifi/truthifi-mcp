@@ -3,11 +3,12 @@
   "name": "com.truthifi/mcp",
   "title": "Truthifi",
   "description": "One verified household record for your AI: accounts, holdings, fees and Score. Can't move money.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "websiteUrl": "https://truthifi.com/features/mcp",
   "repository": {
-    "url": "https://github.com/truthifi/truthifi-mcp",
-    "source": "github"
+    "url": "https://github.com/Truthifi/truthifi-mcp",
+    "source": "github",
+    "id": "1401513077"
   },
   "icons": [
     {
