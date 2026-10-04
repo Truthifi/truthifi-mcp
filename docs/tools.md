@@ -1,6 +1,6 @@
-# Truthifi MCP tools (29)
+# Truthifi MCP tools (30)
 
-Truthifi's access to your bank and brokerage accounts is read-only: nothing your AI assistant does through Truthifi can move money, place trades or change settings there. Three of the 29 tools change data inside Truthifi: `create_asset_liability` adds an asset or liability you track by hand after showing a preview, `delete_asset_liability` permanently removes one, and `run_scan` refreshes your data now (3 credits). `connect_account`, `fix_connections` and `upgrade` only give you a link.
+Truthifi's access to your bank and brokerage accounts is read-only: nothing your AI assistant does through Truthifi can move money, place trades or change settings there. Three of the 30 tools change data inside Truthifi: `create_asset_liability` adds an asset or liability you track by hand after showing a preview, `delete_asset_liability` permanently removes one, and `run_scan` refreshes your data now (3 credits). `connect_account`, `fix_connections` and `upgrade` only give you a link.
 
 | Tool | Title | What it does | Limits | Credits | Plans | Changes data? |
 |---|---|---|---|---|---|---|
@@ -29,6 +29,7 @@ Truthifi's access to your bank and brokerage accounts is read-only: nothing your
 | `run_scan` | Refresh a connection now | Refreshes one connection's data right now, instead of waiting for the automatic refresh |  | 3 | All | **Yes**, inside Truthifi |
 | `get_scan_status` | Check refresh status | Checks how a refresh is going |  | 0 | All | No |
 | `get_subscription_info` | Get plan and credits | Your plan, credits used, and which tools you can use |  | 0 | All | No |
+| `get_subscription_catalog` | Compare plans | Every Truthifi plan, with its price, connection limit, features and MCP credits, so you can compare plans |  | 0 | All | No |
 | `connect_account` | Get a link to connect an account | Gives you a secure link to connect a new bank or brokerage account |  | 0 | All | No (returns a link) |
 | `fix_connections` | Get a link to fix connections | Gives you a link to fix bank or brokerage connections that aren't refreshing (only when one needs fixing) |  | 0 | All | No (returns a link) |
 | `upgrade` | Get a link to upgrade | Gives you a link to the plan picker, when a higher plan exists |  | 0 | All | No (returns a link) |

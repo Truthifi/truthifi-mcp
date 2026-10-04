@@ -80,7 +80,7 @@ Configs for Cursor, VS Code, GitHub Copilot CLI, Windsurf/Devin, Antigravity, Ki
 
 ## Tools
 
-29 tools. Truthifi's access to your bank and brokerage accounts is read-only: nothing your AI assistant does through Truthifi can move money, place trades or change settings there. Three tools change data inside Truthifi only, marked below.
+30 tools. Truthifi's access to your bank and brokerage accounts is read-only: nothing your AI assistant does through Truthifi can move money, place trades or change settings there. Three tools change data inside Truthifi only, marked below.
 
 | Tool | What it does | Credits | Changes data? |
 |---|---|---|---|
@@ -109,6 +109,7 @@ Configs for Cursor, VS Code, GitHub Copilot CLI, Windsurf/Devin, Antigravity, Ki
 | `run_scan` | Refreshes one connection's data right now, instead of waiting for the automatic refresh | 3 | **Yes**, inside Truthifi |
 | `get_scan_status` | Checks how a refresh is going | 0 | No |
 | `get_subscription_info` | Your plan, credits used, and which tools you can use | 0 | No |
+| `get_subscription_catalog` | Every Truthifi plan, with its price, connection limit, features and MCP credits, so you can compare plans | 0 | No |
 | `connect_account` | Gives you a secure link to connect a new bank or brokerage account | 0 | No (returns a link) |
 | `fix_connections` | Gives you a link to fix bank or brokerage connections that aren't refreshing (only when one needs fixing) | 0 | No (returns a link) |
 | `upgrade` | Gives you a link to the plan picker, when a higher plan exists | 0 | No (returns a link) |

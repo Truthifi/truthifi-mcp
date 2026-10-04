@@ -119,8 +119,24 @@
       "description": "Your plan, credits used, and which tools you can use"
     },
     {
+      "name": "get_subscription_catalog",
+      "description": "Every Truthifi plan, with its price, connection limit, features and MCP credits, so you can compare plans"
+    },
+    {
       "name": "connect_account",
       "description": "Gives you a secure link to connect a new bank or brokerage account"
+    },
+    {
+      "name": "fix_connections",
+      "description": "Gives you a link to fix bank or brokerage connections that aren't refreshing (only when one needs fixing)"
+    },
+    {
+      "name": "upgrade",
+      "description": "Gives you a link to the plan picker, when a higher plan exists"
+    },
+    {
+      "name": "get_prompt_catalog",
+      "description": "Ready-made step-by-step prompts, such as a fee audit, a spending review or a tax preview. Instructions only, never account data"
     }
   ],
   "prompts": [],

@@ -5,6 +5,7 @@ All notable changes to this repository. Format: [Keep a Changelog](https://keepa
 ## [Unreleased]
 
 - Registry entry `com.truthifi/mcp` 1.0.2: new description, plus the repository link and ID.
+- Tool reference brought up to the live server: 30 tools, adding `get_subscription_catalog` (compare plans, free). The LobeHub manifest now lists all 30.
 
 ## [1.0.0] - 2026-10-02
 

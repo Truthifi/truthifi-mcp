@@ -4,7 +4,7 @@
 
 ## Docs
 - [README](https://github.com/truthifi/truthifi-mcp#readme): quick start for every client
-- [Tools](https://github.com/truthifi/truthifi-mcp/blob/main/docs/tools.md): all 29 tools, credits, plans and which tools change data
+- [Tools](https://github.com/truthifi/truthifi-mcp/blob/main/docs/tools.md): all 30 tools, credits, plans and which tools change data
 - [Install for agents](https://github.com/truthifi/truthifi-mcp/blob/main/llms-install.md)
 - [Security and privacy](https://github.com/truthifi/truthifi-mcp/blob/main/docs/security-and-privacy.md)
 - [Connect guides](https://truthifi.com/connect)

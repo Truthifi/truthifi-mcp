@@ -228,6 +228,15 @@
       "changesData": false
     },
     {
+      "name": "get_subscription_catalog",
+      "title": "Compare plans",
+      "description": "Every Truthifi plan, with its price, connection limit, features and MCP credits, so you can compare plans",
+      "limits": "",
+      "credits": 0,
+      "plans": "All",
+      "changesData": false
+    },
+    {
       "name": "connect_account",
       "title": "Get a link to connect an account",
       "description": "Gives you a secure link to connect a new bank or brokerage account",
