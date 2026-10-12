@@ -15,6 +15,7 @@ It can't move money or place trades at your bank or brokerage.</p>
 <img src="https://img.shields.io/badge/transport-streamable_http-555" alt="Streamable HTTP">
 <img src="https://img.shields.io/badge/auth-OAuth_%2B_DCR-555" alt="OAuth with Dynamic Client Registration">
 <img src="https://img.shields.io/badge/registry-com.truthifi%2Fmcp-555" alt="Official MCP Registry name">
+<a href="https://mcpservers.org/servers/truthifi/truthifi-mcp"><img src="https://mcpservers.org/badge.svg" alt="Listed on mcpservers.org"></a>
 </p>
 
 Truthifi is the financial hub for families, advisors and AI agents: one verified household record they work on together, shared only on the household's terms. This MCP server brings that record into your AI assistant: accounts, activity, holdings, fees, performance, cash flow, the advisors on your accounts, financial diagnostics, and your **Truthifi Score** with the findings behind it, from 18,000+ supported institutions (through data partners; available data varies by institution). So your AI acts on what's real, not what's reported.
@@ -138,6 +139,26 @@ Truthifi is unlocking agentic finance for everyone. We believe a household shoul
 - **Families, agents and advisors.** Finally working from one verified truth.
 
 Truthifi doesn't sell investments, so it can stay independent. Learn more at [truthifi.com](https://truthifi.com).
+
+## Plans, credits, access and your data
+
+**Plans and credits.** Each tool call uses the credits shown in the Tools table above; tools marked 0 are free. Each Truthifi plan that includes MCP access has a daily and a monthly allowance of AI tool credits, and a free plan is enough to try the server. Your assistant can call `get_subscription_info` (free) to see your plan, credits used and which tools you can use, and `get_subscription_catalog` (free) to compare plans. Prices and allowances: <https://truthifi.com/pricing>.
+
+**What your assistant receives.** Tool results contain your financial data, such as accounts, balances, holdings, transactions, fees and advisor details. They are sent to the AI assistant you connected and are then handled under that provider's terms and privacy policy, not Truthifi's.
+
+**Approving access.** When you connect an assistant, Truthifi asks you to sign in and then shows a consent screen naming the application and listing what it can read and the two things it can change, with Authorize and Cancel buttons. Nothing is shared until you choose Authorize.
+
+**The three tools that change data.** They change data inside Truthifi only. None of them can move money, place trades or change anything at your bank or brokerage.
+
+| Tool | What changes | Safeguard |
+|---|---|---|
+| `create_asset_liability` | Adds one asset or liability you track by hand | Shows a preview first and saves only after you confirm |
+| `delete_asset_liability` | Permanently deletes one asset or liability you track by hand | Applies only to items you added by hand, never to linked accounts |
+| `run_scan` | Refreshes one connection's data now instead of waiting for the automatic refresh | Uses 3 credits; it re-reads data and never changes anything at the institution |
+
+Most assistants also ask for your approval before they call a tool, depending on their settings.
+
+**Revoking access.** In the Truthifi app, open **Settings** to see the AI assistants you've connected, choose which accounts each one can see, and revoke an assistant's access. Revoking stops that assistant's access from Truthifi's side. You can also remove the connector in the assistant itself. To request access to or deletion of your data, email support@truthifi.com.
 
 ## Security and privacy
 
