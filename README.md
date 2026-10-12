@@ -15,6 +15,7 @@ It can't move money or place trades at your bank or brokerage.</p>
 <img src="https://img.shields.io/badge/transport-streamable_http-555" alt="Streamable HTTP">
 <img src="https://img.shields.io/badge/auth-OAuth_%2B_DCR-555" alt="OAuth with Dynamic Client Registration">
 <img src="https://img.shields.io/badge/registry-com.truthifi%2Fmcp-555" alt="Official MCP Registry name">
+<a href="https://mcpservers.org/servers/truthifi/truthifi-mcp"><img src="https://mcpservers.org/badge.svg" alt="Listed on mcpservers.org"></a>
 </p>
 
 Truthifi is the financial hub for families, advisors and AI agents: one verified household record they work on together, shared only on the household's terms. This MCP server brings that record into your AI assistant: accounts, activity, holdings, fees, performance, cash flow, the advisors on your accounts, financial diagnostics, and your **Truthifi Score** with the findings behind it, from 18,000+ supported institutions (through data partners; available data varies by institution). So your AI acts on what's real, not what's reported.
@@ -80,7 +81,7 @@ Configs for Cursor, VS Code, GitHub Copilot CLI, Windsurf/Devin, Antigravity, Ki
 
 ## Tools
 
-30 tools. Truthifi's access to your bank and brokerage accounts is read-only: nothing your AI assistant does through Truthifi can move money, place trades or change settings there. Three tools change data inside Truthifi only, marked below.
+34 tools. Truthifi's access to your bank and brokerage accounts is read-only: nothing your AI assistant does through Truthifi can move money, place trades or change settings there. Three tools change data inside Truthifi only, marked below.
 
 | Tool | What it does | Credits | Changes data? |
 |---|---|---|---|
@@ -101,9 +102,13 @@ Configs for Cursor, VS Code, GitHub Copilot CLI, Windsurf/Devin, Antigravity, Ki
 | `create_asset_liability` | Adds one asset or liability you track by hand. Shows a preview first, and saves only after you confirm | 0 | **Yes**, inside Truthifi |
 | `delete_asset_liability` | Permanently deletes one asset or liability you track by hand | 1 | **Yes**, inside Truthifi (permanent) |
 | `get_findings` | The financial health findings behind your Truthifi Score | 1 | No |
+| `get_finding_definitions` | What each Truthifi Score finding means and how significant it is. Definitions only, never account data | 0 | No |
 | `get_truthifi_score_history` | Your Truthifi Score over time | 1 | No |
 | `get_security_info` | Reference details for up to 15 securities per call (fewer on some plans) | 1 | No |
 | `get_security_distributions` | Dividend and capital-gain history for up to 15 securities per call (fewer on some plans), up to 2 years back | 1 | No |
+| `get_security_fees` | How a fund's net expense ratio has changed over time, with cost rankings against similar funds | 1 | No |
+| `get_security_daily_prices` | One security's daily open, close, adjusted close and volume over a date range (stocks, ETFs and mutual funds; not bonds) | 1 | No |
+| `get_exchange_rates` | The daily rate Truthifi uses to convert a non-US-dollar account to US dollars | 1 | No |
 | `get_security_news` | Recent news by stock ticker or by topic (stock tickers only, not funds) | 1 | No |
 | `get_truthifi_info` | Answers questions about Truthifi, linking accounts and US personal-finance benchmarks | 0 | No |
 | `run_scan` | Refreshes one connection's data right now, instead of waiting for the automatic refresh | 3 | **Yes**, inside Truthifi |
@@ -138,6 +143,24 @@ Truthifi is unlocking agentic finance for everyone. We believe a household shoul
 - **Families, agents and advisors.** Finally working from one verified truth.
 
 Truthifi doesn't sell investments, so it can stay independent. Learn more at [truthifi.com](https://truthifi.com).
+
+## Plans, credits, access and your data
+
+**Plans and credits.** Each tool call uses the credits shown in the Tools table above; tools marked 0 are free. Each Truthifi plan that includes MCP access has a daily and a monthly allowance of AI tool credits, and a free plan is enough to try the server. Your assistant can call `get_subscription_info` (free) to see your plan, credits used and which tools you can use, and `get_subscription_catalog` (free) to compare plans. Prices and allowances: <https://truthifi.com/pricing>.
+
+**What your assistant receives.** Tool results contain your financial data, such as accounts, balances, holdings, transactions, fees and advisor details. They are sent to the AI assistant you connected and are then handled under that provider's terms and privacy policy, not Truthifi's.
+
+**Approving access.** When you connect an assistant, Truthifi asks you to sign in and then shows a consent screen naming the application and listing what it can read and the two things it can change, with Authorize and Cancel buttons. Nothing is shared until you choose Authorize.
+
+**The three tools that change data.** They change data inside Truthifi only. None of them can move money, place trades or change anything at your bank or brokerage.
+
+- `create_asset_liability` adds one asset or liability you track by hand. It shows a preview first and saves only after you confirm.
+- `delete_asset_liability` permanently deletes one asset or liability you track by hand. It applies only to items you added by hand, never to linked accounts.
+- `run_scan` refreshes one connection's data now instead of waiting for the automatic refresh. It uses 3 credits, re-reads data and never changes anything at the institution.
+
+Most assistants also ask for your approval before they call a tool, depending on their settings.
+
+**Revoking access.** In the Truthifi app, open **Settings** to see the AI assistants you've connected, choose which accounts each one can see, and revoke an assistant's access. Revoking stops that assistant's access from Truthifi's side. You can also remove the connector in the assistant itself. To request access to or deletion of your data, email support@truthifi.com.
 
 ## Security and privacy
 

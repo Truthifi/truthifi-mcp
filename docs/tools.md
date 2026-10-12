@@ -1,6 +1,6 @@
-# Truthifi MCP tools (30)
+# Truthifi MCP tools (34)
 
-Truthifi's access to your bank and brokerage accounts is read-only: nothing your AI assistant does through Truthifi can move money, place trades or change settings there. Three of the 30 tools change data inside Truthifi: `create_asset_liability` adds an asset or liability you track by hand after showing a preview, `delete_asset_liability` permanently removes one, and `run_scan` refreshes your data now (3 credits). `connect_account`, `fix_connections` and `upgrade` only give you a link.
+Truthifi's access to your bank and brokerage accounts is read-only: nothing your AI assistant does through Truthifi can move money, place trades or change settings there. Three of the 34 tools change data inside Truthifi: `create_asset_liability` adds an asset or liability you track by hand after showing a preview, `delete_asset_liability` permanently removes one, and `run_scan` refreshes your data now (3 credits). `connect_account`, `fix_connections` and `upgrade` only give you a link.
 
 | Tool | Title | What it does | Limits | Credits | Plans | Changes data? |
 |---|---|---|---|---|---|---|
@@ -21,9 +21,13 @@ Truthifi's access to your bank and brokerage accounts is read-only: nothing your
 | `create_asset_liability` | Add a manual asset or liability | Adds one asset or liability you track by hand. Shows a preview first, and saves only after you confirm |  | 0 | Pro+ | **Yes**, inside Truthifi |
 | `delete_asset_liability` | Delete a manual asset or liability | Permanently deletes one asset or liability you track by hand |  | 1 | Pro+ | **Yes**, inside Truthifi (permanent) |
 | `get_findings` | Get Truthifi Score findings | The financial health findings behind your Truthifi Score |  | 1 | Pro+ | No |
+| `get_finding_definitions` | Get finding definitions | What each Truthifi Score finding means and how significant it is. Definitions only, never account data |  | 0 | Pro+ | No |
 | `get_truthifi_score_history` | Get Truthifi Score history | Your Truthifi Score over time |  | 1 | Pro+ | No |
 | `get_security_info` | Get security details | Reference details for up to 15 securities per call | Up to 15 securities per call (3 on Explore and Free Checkup) | 1 | All | No |
 | `get_security_distributions` | Get dividend and capital-gain history | Dividend and capital-gain history for up to 15 securities per call, up to 2 years back | Up to 15 securities per call (3 on Explore and Free Checkup), up to 2 years back | 1 | All | No |
+| `get_security_fees` | Get fund expense-ratio history | How a fund's net expense ratio has changed over time, with cost rankings against similar funds | Up to 15 securities per call (3 on Explore and Free Checkup), up to 2 years back; rankings on Pro+ only | 1 | All | No |
+| `get_security_daily_prices` | Get daily prices | One security's daily open, close, adjusted close and volume over a date range (stocks, ETFs and mutual funds; not bonds) | One security per call, up to 1 year per call, from 2020 | 1 | Max+ | No |
+| `get_exchange_rates` | Get exchange rates | The daily rate Truthifi uses to convert a non-US-dollar account to US dollars | One currency per call, up to 1 year per call, from 2020 | 1 | All | No |
 | `get_security_news` | Get security news | Recent news by stock ticker or by topic (stock tickers only, not funds) |  | 1 | Pro+ | No |
 | `get_truthifi_info` | Ask about Truthifi | Answers questions about Truthifi, linking accounts and US personal-finance benchmarks |  | 0 | All | No |
 | `run_scan` | Refresh a connection now | Refreshes one connection's data right now, instead of waiting for the automatic refresh |  | 3 | All | **Yes**, inside Truthifi |
