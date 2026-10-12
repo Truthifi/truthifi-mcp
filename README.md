@@ -81,7 +81,7 @@ Configs for Cursor, VS Code, GitHub Copilot CLI, Windsurf/Devin, Antigravity, Ki
 
 ## Tools
 
-30 tools. Truthifi's access to your bank and brokerage accounts is read-only: nothing your AI assistant does through Truthifi can move money, place trades or change settings there. Three tools change data inside Truthifi only, marked below.
+34 tools. Truthifi's access to your bank and brokerage accounts is read-only: nothing your AI assistant does through Truthifi can move money, place trades or change settings there. Three tools change data inside Truthifi only, marked below.
 
 | Tool | What it does | Credits | Changes data? |
 |---|---|---|---|
@@ -102,9 +102,13 @@ Configs for Cursor, VS Code, GitHub Copilot CLI, Windsurf/Devin, Antigravity, Ki
 | `create_asset_liability` | Adds one asset or liability you track by hand. Shows a preview first, and saves only after you confirm | 0 | **Yes**, inside Truthifi |
 | `delete_asset_liability` | Permanently deletes one asset or liability you track by hand | 1 | **Yes**, inside Truthifi (permanent) |
 | `get_findings` | The financial health findings behind your Truthifi Score | 1 | No |
+| `get_finding_definitions` | What each Truthifi Score finding means and how significant it is. Definitions only, never account data | 0 | No |
 | `get_truthifi_score_history` | Your Truthifi Score over time | 1 | No |
 | `get_security_info` | Reference details for up to 15 securities per call (fewer on some plans) | 1 | No |
 | `get_security_distributions` | Dividend and capital-gain history for up to 15 securities per call (fewer on some plans), up to 2 years back | 1 | No |
+| `get_security_fees` | How a fund's net expense ratio has changed over time, with cost rankings against similar funds | 1 | No |
+| `get_security_daily_prices` | One security's daily open, close, adjusted close and volume over a date range (stocks, ETFs and mutual funds; not bonds) | 1 | No |
+| `get_exchange_rates` | The daily rate Truthifi uses to convert a non-US-dollar account to US dollars | 1 | No |
 | `get_security_news` | Recent news by stock ticker or by topic (stock tickers only, not funds) | 1 | No |
 | `get_truthifi_info` | Answers questions about Truthifi, linking accounts and US personal-finance benchmarks | 0 | No |
 | `run_scan` | Refreshes one connection's data right now, instead of waiting for the automatic refresh | 3 | **Yes**, inside Truthifi |
@@ -150,11 +154,9 @@ Truthifi doesn't sell investments, so it can stay independent. Learn more at [tr
 
 **The three tools that change data.** They change data inside Truthifi only. None of them can move money, place trades or change anything at your bank or brokerage.
 
-| Tool | What changes | Safeguard |
-|---|---|---|
-| `create_asset_liability` | Adds one asset or liability you track by hand | Shows a preview first and saves only after you confirm |
-| `delete_asset_liability` | Permanently deletes one asset or liability you track by hand | Applies only to items you added by hand, never to linked accounts |
-| `run_scan` | Refreshes one connection's data now instead of waiting for the automatic refresh | Uses 3 credits; it re-reads data and never changes anything at the institution |
+- `create_asset_liability` adds one asset or liability you track by hand. It shows a preview first and saves only after you confirm.
+- `delete_asset_liability` permanently deletes one asset or liability you track by hand. It applies only to items you added by hand, never to linked accounts.
+- `run_scan` refreshes one connection's data now instead of waiting for the automatic refresh. It uses 3 credits, re-reads data and never changes anything at the institution.
 
 Most assistants also ask for your approval before they call a tool, depending on their settings.
 

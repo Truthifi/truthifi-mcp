@@ -156,6 +156,15 @@
       "changesData": false
     },
     {
+      "name": "get_finding_definitions",
+      "title": "Get finding definitions",
+      "description": "What each Truthifi Score finding means and how significant it is. Definitions only, never account data",
+      "limits": "",
+      "credits": 0,
+      "plans": "Pro+",
+      "changesData": false
+    },
+    {
       "name": "get_truthifi_score_history",
       "title": "Get Truthifi Score history",
       "description": "Your Truthifi Score over time",
@@ -178,6 +187,33 @@
       "title": "Get dividend and capital-gain history",
       "description": "Dividend and capital-gain history for up to 15 securities per call, up to 2 years back",
       "limits": "Up to 15 securities per call (3 on Explore and Free Checkup), up to 2 years back",
+      "credits": 1,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "get_security_fees",
+      "title": "Get fund expense-ratio history",
+      "description": "How a fund's net expense ratio has changed over time, with cost rankings against similar funds",
+      "limits": "Up to 15 securities per call (3 on Explore and Free Checkup), up to 2 years back; rankings on Pro+ only",
+      "credits": 1,
+      "plans": "All",
+      "changesData": false
+    },
+    {
+      "name": "get_security_daily_prices",
+      "title": "Get daily prices",
+      "description": "One security's daily open, close, adjusted close and volume over a date range (stocks, ETFs and mutual funds; not bonds)",
+      "limits": "One security per call, up to 1 year per call, from 2020",
+      "credits": 1,
+      "plans": "Max+",
+      "changesData": false
+    },
+    {
+      "name": "get_exchange_rates",
+      "title": "Get exchange rates",
+      "description": "The daily rate Truthifi uses to convert a non-US-dollar account to US dollars",
+      "limits": "One currency per call, up to 1 year per call, from 2020",
       "credits": 1,
       "plans": "All",
       "changesData": false
