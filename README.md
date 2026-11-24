@@ -34,7 +34,7 @@ This repository holds **documentation, client configuration and agent skills onl
 
 **Claude** (web or desktop; then available on mobile): Customize → Connectors → **+** → *Add custom connector* → paste `https://api.truthifi.com/mcp` and leave Advanced settings empty. On Team or Enterprise, an Owner adds it first under Organization settings → Connectors.
 
-**ChatGPT** (web): ChatGPT connects custom MCP servers through developer mode, which OpenAI describes as intended for developers; read OpenAI's guidance before turning it on. Then create an app, paste `https://api.truthifi.com/mcp` and choose OAuth. Which ChatGPT plans can use it, and whether tools that change data are allowed, is set by OpenAI; current steps: <https://truthifi.com/connect>.
+**ChatGPT** (web): add Truthifi at <https://chatgpt.com/plugins>, click **Add**, then *Add custom MCP server*; paste `https://api.truthifi.com/mcp` and choose OAuth. ChatGPT Pro can add Truthifi's read-only connector, as can Business, Enterprise and Edu workspaces; Plus, Go and Free cannot add custom connectors. Current steps: <https://truthifi.com/connect>.
 
 **Claude Code**
 
