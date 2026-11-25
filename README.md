@@ -66,7 +66,7 @@ npx skills add truthifi/truthifi-mcp
 
 Configs for Cursor, VS Code, GitHub Copilot CLI, Windsurf/Devin, Antigravity, Kiro, Zed, JetBrains, Cline, Goose, Continue, OpenCode, LM Studio and more are in [`configs/`](configs/), with which ones we've tested.
 
-**Cursor plugin** (connector plus skills): install *Truthifi* from the Cursor Marketplace, or use the button above for the MCP server only. **Kiro power:** Powers → Import power from GitHub → `https://github.com/truthifi/truthifi-mcp`. Step-by-step guides: <https://truthifi.com/connect>.
+**Cursor:** use the **Add to Cursor** button above to add the Truthifi MCP server. **Kiro power:** Powers → Import power from GitHub → `https://github.com/truthifi/truthifi-mcp`. Step-by-step guides: <https://truthifi.com/connect>.
 
 ## What you can ask
 
